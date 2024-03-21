@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+struct details{
+        char name;
+        char course1;
+        char course2;
+        char course3;
+        int reg_no;
+    } d[3];
+int main()
+{
+    int i;
+    printf("Enter your details: \n");
+    for (i=0;i<3;i++){
+        printf("Enter name:  \n");
+        scanf("%s", &d[i].name);
+        printf("Enter your registration number:  \n");
+        scanf("%d", &d[i].reg_no);
+        printf("Enter 1st course:  \n");
+        scanf("%s", &d[i].course1);
+        printf("Enter 2nd course:  \n");
+        scanf("%s", &d[i].course2);
+        printf("Enter 3rd course:  \n");
+        scanf("%s", &d[i].course3);
+  }
+  printf("Your updated information: \n");
+  for (i=0;i<2;i++){
+       printf("Name %s: \n", d[i].name);
+       printf("Registration number %d\n: ", d[i].reg_no);
+       printf("Course 1 %s: \n", d[i].course1);
+       printf("Course 2 %s: \n", d[i].course2);
+       printf("Course 3 %s: \n", d[i].course3);
+       if (i=3){
+            printf("Name %s: \n", d[i].name);
+            printf("Registration number %d: \n ", d[i].reg_no);
+            printf("Course 1 %s: \n", d[i].course1);
+            printf("Course 2 %s: \n", d[i].course3);
+            printf("Course 3 %s: \n", d[i].course2);
+       }
+    }
+
+    return 0;
+}
